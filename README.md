@@ -1,6 +1,9 @@
 import streamlit as st
+# Set the page configuration
+st.set_page_config(page_title="Joke Generator", page_icon="😂")
+# Streamlit UI
+st.title("Word-Based Joke Generator")
 import random
-
 # Predefined dictionary of jokes based on keywords
 jokes_dict = {
     "dog": [
