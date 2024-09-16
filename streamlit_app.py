@@ -1,9 +1,8 @@
 import streamlit as st
+import random
 
 # Set the page configuration
 st.set_page_config(page_title="Joke Generator", page_icon="😂")
-
-import random
 
 # Predefined dictionary of jokes based on keywords
 jokes_dict = {
@@ -29,6 +28,10 @@ def get_joke(word):
 
 # Streamlit UI
 st.title("Word-Based Joke Generator")
+
+# Instruction for users
+allowed_words = ", ".join(jokes_dict.keys())  # Create a comma-separated string of allowed words
+st.write(f"Enter one of the following words to get a joke: {allowed_words}")
 
 # Input field for the word
 word = st.text_input("Enter a word:")
